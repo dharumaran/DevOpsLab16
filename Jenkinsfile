@@ -14,16 +14,16 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                bat 'mvn -B -DskipTests clean compile'
-            }
-        }
+    steps {
+        bat 'mvn -B -DskipTests clean compile'
+    }
+}
 
         stage('Test') {
-            steps {
-                bat 'mvn -B test'
-            }
-        }
+    steps {
+        bat 'mvn -B test'
+    }
+}
 
         stage('Package') {
             steps {
